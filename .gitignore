@@ -1,0 +1,7 @@
+log/*
+tmp/*
+config/database.yml
+.loadpath
+.project
+.DS_Store
+db/schema.rb
