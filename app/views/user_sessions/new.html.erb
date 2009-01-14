@@ -1,0 +1,19 @@
+
+<% title "Welcome to WestEd Interactive Base App" %>
+
+<% error_handling_form_for @user_session, :ul_class => "smallLabels", :url => user_session_path do |f| %>
+  <%= f.error_messages %>
+  	<div >
+		<div id="login_container" class="span-25">
+			<h2>Login</h2>
+			
+			 <%= f.text_field :email,  :label => "Email:" %>
+			 <%= f.password_field :password, :class => "smallLabels", :label => "Password:" %>
+			 <%= f.check_box :remember_me, :wrapper_class => "alignLabelCheckbox", :class => "checkbox" %>
+
+	  	</div>
+	</div>
+  	  <%= f.submit "Login" %>
+	<% end %>
+
+	<%=link_to "Forgot Password?", "/password_resets/new"%>

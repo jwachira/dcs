@@ -1,0 +1,5 @@
+<% title 'New User' %>
+<% error_handling_form_for @user do |f| %>
+  <%= render :partial => "form", :locals => {:f => f} %>
+  <%= f.cancel_and_submit%>
+<% end %>

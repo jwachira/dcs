@@ -14,4 +14,13 @@ config.action_view.debug_rjs                         = true
 config.action_controller.perform_caching             = false
 
 # Don't care if the mailer can't send
-config.action_mailer.raise_delivery_errors = false
+config.action_mailer.raise_delivery_errors = true
+
+dev_sendmail_settings = {
+  :address => "localhost",
+  :port    => "25",
+  :domain  => "localhost:3000"
+}
+config.action_mailer.delivery_method = :sendmail
+config.action_mailer.smtp_settings = dev_sendmail_settings
+config.action_mailer.default_url_options = {:host => "localhost:3000"}

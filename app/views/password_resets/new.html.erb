@@ -1,0 +1,9 @@
+<h2>Forgot Password</h2>
+
+<p>Enter your email address below and instructions to reset your password will be emailed to you:</p>
+
+<% error_handling_form_for :user, :url => password_resets_path, :ul_class => "smallLabels" do |f| %>
+
+<%= f.text_field :email %>
+<%= f.cancel_and_submit :submit_text => "Send me a link to reset my password", :cancel_url => login_path %>
+<% end %> 

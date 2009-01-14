@@ -1,0 +1,8 @@
+<h2>Change My Password</h2>
+
+<% error_handling_form_for @user, :ul_class => "smallLabels", :url => password_reset_path, :method => :put do |f| %>
+  <%=password_instructions %>
+  <%= f.password_field :password %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit "Update my password and log me in" %>
+<% end %>

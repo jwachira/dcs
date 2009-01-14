@@ -6,10 +6,11 @@ namespace :db do
              ['Rolf',   'Hanson',     'rhanson@wested.org'],
              ['Andrew', 'Carpenter',  'acarpen@wested.org'],
              ['Mark',   'Nutini',     'mnutini@wested.org'],
-             ['James',   'Wachira',     'jwachir@wested.org'],
+             ['James',   'Wachira',   'jwachir@wested.org'],
              ['Bob',   'Burbach',     'bburbac@wested.org'],
-			 ['Dave',  'Augustine',   'daugust@wested.org']
-
+			 ['Dave',  'Augustine',   'daugust@wested.org'],
+			 ['Joel',  'Henderson',   'jhender@wested.org'],
+			 ['Brian',  'Case',       'bcase@wested.org']
             ]
     
     users.each do |user|
@@ -17,7 +18,6 @@ namespace :db do
       u.first_name = user[0]
       u.last_name = user[1]
       u.email = user[2]
-      u.manager = user[3]
       u.save(false)
     end
   end

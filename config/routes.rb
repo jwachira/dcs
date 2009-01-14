@@ -38,6 +38,17 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing the them or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  # map.connect ':controller/:action/:id'
+  # map.connect ':controller/:action/:id.:format'
+  map.resources :password_resets
+  map.resource :account, :controller => "users"
+  
+  map.resource :user_session
+  map.root :controller => "home", :action => "index"
+  map.login  'login',  :controller => "user_sessions", :action => "new"
+  map.logout 'logout', :controller => "user_sessions", :action => "destroy"
+  map.resources :users, :member => {:delete => :get} do |user|
+    user.resource :activation, :controller => "users/activation", :member => {:delete => :get}
+    user.resource :password, :controller => "users/password"
+  end
 end

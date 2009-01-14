@@ -1,0 +1,9 @@
+<% title "Change Password for #{@user.full_name}"  %>
+
+<% error_handling_form_for @user, :url => user_password_path(@user), :ul_class => "smallLabels" do |f| %>
+<%=f.wrap_field(:current_password) {password_field_tag("user[current_password]")} %>
+<%=password_instructions %>
+<%=f.password_field :password %>
+<%=f.password_field :password_confirmation %>
+<%=f.cancel_and_submit%>
+<% end %>
