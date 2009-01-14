@@ -20,5 +20,3 @@ plugin 'cross_site_sniper',
 # searchlogic
 # resource_controller
 # cross_site_sniper
-# attribute_fu
-# annotate_models

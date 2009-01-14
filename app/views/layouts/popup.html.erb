@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <title>CTE Instructions | <%= yield :title %></title>
+	
+	<%= stylesheet_link_tag 'screen.css', 	:media => :screen %>
+	<%= stylesheet_link_tag 'cte.css', 		:media => :screen %>
+	<%= stylesheet_link_tag 'print.css', 	:media => :print  %>
+
+</head>
+<body class="popup">
+	<!--CONTAINER-->
+
+		<!-- HEADER -->
+		<div class="header box-1 last">
+			<h2 class="bottom"><%= yield :title %></h2>
+		</div>	
+		
+		<div class="content box-1">
+			<%= yield %>
+		</div>
+		
+</body>
+</html>
