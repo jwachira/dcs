@@ -16,3 +16,6 @@
 [submodule "vendor/plugins/cross_site_sniper"]
 	path = vendor/plugins/cross_site_sniper
 	url = git://github.com/wwidea/cross_site_sniper.git
+[submodule "vendor/plugins/declarative_authorization"]
+	path = vendor/plugins/declarative_authorization
+	url = git://github.com/stffn/declarative_authorization.git
