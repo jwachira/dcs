@@ -13,3 +13,6 @@
 [submodule "vendor/plugins/paperclip"]
 	path = vendor/plugins/paperclip
 	url = git://github.com/thoughtbot/paperclip.git
+[submodule "vendor/plugins/cross_site_sniper"]
+	path = vendor/plugins/cross_site_sniper
+	url = git://github.com/wwidea/cross_site_sniper.git
