@@ -19,3 +19,6 @@
 [submodule "vendor/plugins/declarative_authorization"]
 	path = vendor/plugins/declarative_authorization
 	url = git://github.com/stffn/declarative_authorization.git
+[submodule "vendor/plugins/wested_cap"]
+	path = vendor/plugins/wested_cap
+	url = git@github.com:wested/wested_cap.git
