@@ -19,3 +19,6 @@
 [submodule "vendor/plugins/wested_cap"]
 	path = vendor/plugins/wested_cap
 	url = git@github.com:wested/wested_cap.git
+[submodule "vendor/plugins/annotate_models"]
+	path = vendor/plugins/annotate_models
+	url = git@github.com:wested/annotate_models.git
