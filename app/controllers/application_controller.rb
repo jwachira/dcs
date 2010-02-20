@@ -19,7 +19,6 @@ class ApplicationController < ActionController::Base
   helper_method :current_user_session, :current_user
 
   before_filter :require_login
-  extend CustomResourceController
 
   def set_stamper
     User.stamper ||= current_user
