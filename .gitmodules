@@ -13,3 +13,6 @@
 [submodule "vendor/plugins/cross_site_sniper"]
 	path = vendor/plugins/cross_site_sniper
 	url = git@github.com:wested/cross_site_sniper.git
+[submodule "vendor/plugins/jrails"]
+	path = vendor/plugins/jrails
+	url = git@github.com:wested/jrails.git
