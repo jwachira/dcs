@@ -1,9 +1,3 @@
-[submodule "vendor/plugins/jrails"]
-	path = vendor/plugins/jrails
-	url = git://github.com/aaronchi/jrails.git
-[submodule "vendor/plugins/cross_site_sniper"]
-	path = vendor/plugins/cross_site_sniper
-	url = git://github.com/wwidea/cross_site_sniper.git
 [submodule "vendor/plugins/wested_cap"]
 	path = vendor/plugins/wested_cap
 	url = git@github.com:wested/wested_cap.git
@@ -16,3 +10,9 @@
 [submodule "vendor/plugins/resource_controller"]
 	path = vendor/plugins/resource_controller
 	url = git@github.com:wested/resource_controller.git
+[submodule "vendor/plugins/cross_site_sniper"]
+	path = vendor/plugins/cross_site_sniper
+	url = git@github.com:wested/cross_site_sniper.git
+[submodule "vendor/plugins/jrails"]
+	path = vendor/plugins/jrails
+	url = git@github.com:wested/jrails.git
