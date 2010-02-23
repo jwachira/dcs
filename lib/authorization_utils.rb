@@ -1,13 +1,5 @@
 module AuthorizationUtils
   private
-  
-  def require_object_is_current_user
-    unless current_user == object
-      flash[:error] = "You are not authorized to access that page."
-      redirect_to root_url
-      return false
-    end
-  end
 
   def require_login
     unless current_user
