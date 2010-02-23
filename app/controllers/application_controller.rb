@@ -23,4 +23,23 @@ class ApplicationController < ActionController::Base
   def set_stamper
     User.stamper ||= current_user
   end
+  
+  protected
+
+    # Define how declarative authentication responds to permission denied.
+    def permission_denied
+      raise Authorization::NotAuthorized
+    end
+  
+  private
+
+    rescue_from Authorization::NotAuthorized, :with => :not_authorized
+    def not_authorized
+      render :template => "errors/403", :status => 403
+    end
+
+    rescue_from ActiveRecord::RecordNotFound, ActionController::RoutingError, :with => :record_not_found
+    def record_not_found
+      render :template => "errors/404", :status => 404
+    end
 end
