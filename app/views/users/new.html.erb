@@ -1,5 +1,7 @@
 <% title 'New User' %>
-<% error_handling_form_for @user do |f| %>
+<% semantic_form_for @user do |f| %>
   <%= render :partial => "form", :locals => {:f => f} %>
-  <%= f.cancel_and_submit%>
+  <% f.buttons do %>
+  <%= link_to "Cancel", :back %><%= f.commit_button %>
+  <% end %>
 <% end %>

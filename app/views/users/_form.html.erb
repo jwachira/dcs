@@ -1,6 +1,8 @@
-  <%=f.text_field :first_name %> 
-  <%=f.text_field :last_name %> 
-  <%=f.password_field :password %>
-  <%=f.password_field :password_confirmation %>
-  <%=f.text_field :email %>
-
+<% f.inputs do %>
+  <%=f.input :first_name %> 
+  <%=f.input :last_name %> 
+  <%=f.input :email %>
+  <% if current_user.try(:role) == 'Admin' %>
+  <%= f.input :role, :as => :select, :collection => User::ROLES %>
+  <% end %>
+<% end %>
