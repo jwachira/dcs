@@ -57,6 +57,6 @@ This is the WEI base code for starting projects. Follow the getting started inst
 
 == Configuring Hoptoad
 
-After creating the project and configuring the repository, run the following snippet to generate the Hoptoad initializer and modify the deploy script. Double check the hoptoad_notifier page for current instructions (http://github.com/thoughtbot/hoptoad_notifier).
+After creating the project and configuring the repository, enable the Hoptoad gem in the environment.rb and run the following snippet to generate the Hoptoad initializer and modify the deploy script. Double check the hoptoad_notifier page for current instructions (http://github.com/thoughtbot/hoptoad_notifier).
   ./script/generate hoptoad --api-key your_key_here
 
