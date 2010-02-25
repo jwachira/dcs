@@ -36,7 +36,8 @@ class User < ActiveRecord::Base
   validates_format_of :password, :with => /[a-z]/i, :allow_nil => true, :message => "must include a letter"
   validates_format_of :password, :with => /[0-9]/, :allow_nil => true, :message => "must include a number"
 
-
+  attr_protected :password, :password_confirmation, :role
+  
   # The necessary method for the plugin to find out about the role symbols
   # Roles returns e.g. [:admin]
   
