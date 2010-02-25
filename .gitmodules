@@ -13,3 +13,6 @@
 [submodule "vendor/plugins/jrails"]
 	path = vendor/plugins/jrails
 	url = git@github.com:wested/jrails.git
+[submodule "vendor/plugins/validation_reflection"]
+	path = vendor/plugins/validation_reflection
+	url = git@github.com:wested/validation_reflection.git
