@@ -42,8 +42,16 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.xml
   def create
-    @user = User.new(params[:user])
-
+    @user = User.new
+    @user.email = params[:user][:email]
+    @user.first_name = params[:user][:first_name]
+    @user.last_name = params[:user][:last_name]
+    
+    ## need to limit role editing.
+    if permitted_to?(:set_role, @user)
+      @user.role = params[:user][:role]
+    end
+    
     respond_to do |format|
       if @user.save
         flash[:notice] = 'User was successfully created.'
@@ -60,9 +68,17 @@ class UsersController < ApplicationController
   # PUT /users/1.xml
   def update
     @user = User.find(params[:id])
-
+    @user.email = params[:user][:email]
+    @user.first_name = params[:user][:first_name]
+    @user.last_name = params[:user][:last_name]
+    
+    ## need to limit role editing.
+    if permitted_to?(:set_role, @user)
+      @user.role = params[:user][:role]
+    end
+    
     respond_to do |format|
-      if @user.update_attributes(params[:user])
+      if @user.save
         flash[:notice] = 'User was successfully updated.'
         format.html { redirect_to(@user) }
         format.xml  { head :ok }
