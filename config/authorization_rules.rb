@@ -14,15 +14,18 @@ authorization do
 
   role :admin do
     includes :user
-    has_permission_on :users, :to => :manage
+    has_permission_on :users, :to => [:manage, :set_role]
   end
 end
  
 privileges do
   # default privilege hierarchies to facilitate RESTful Rails apps
-  privilege :manage, :includes => [:create, :read, :update, :delete]
+  privilege :manage, :includes => [:create, :read, :update, :destroy]
   privilege :read, :includes => [:index, :show]
   privilege :create, :includes => :new
   privilege :update, :includes => :edit
-  privilege :delete, :includes => :destroy
+  privilege :destroy, :includes => :delete
+  
+  # Misc, non-RESTful privileges
+  privilege :set_role # used on User
 end
