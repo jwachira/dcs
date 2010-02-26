@@ -1,4 +1,4 @@
 class SpecialController < ApplicationController
-  def index
+  def home
   end
 end

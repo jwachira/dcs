@@ -1,0 +1,5 @@
+<% title 'Welcome to weibaseapp' %>
+
+<% if permitted_to? :manage, :users %>
+  <%= link_to 'Manage Users', users_path %>
+<% end %>
