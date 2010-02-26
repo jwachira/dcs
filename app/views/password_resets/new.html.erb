@@ -4,10 +4,11 @@
 
 <% semantic_form_for :user, :url => password_resets_path do |f| %>
   <% f.inputs do %>
-    <%= f.input :email %>
+    <%= f.input :email, :required => true %>
   <% end %>
   <% f.buttons do %>
-    <%= f.commit_button true, :label => "Send me a link to reset my password" %>
+    <%= f.commit_button "Send me a link to reset my password" %>
+    <%= f.cancel_link %>
   <% end %>
 <%# f.cancel_and_submit :submit_text => "Send me a link to reset my password", :cancel_url => login_path %>
 <% end %> 

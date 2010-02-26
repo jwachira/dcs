@@ -1,12 +1,12 @@
 <% title "Change Password for #{@user.full_name}"  %>
 <% semantic_form_for @user, :url => user_password_path(@user) do |f| %>
-  <%=password_instructions %>
+  <%= password_instructions %>
   <% f.inputs do %>
-    <%=f.input :password %>
-    <%=f.input :password_confirmation %>
+    <%= f.input :password %>
+    <%= f.input :password_confirmation %>
   <% end %>
   <% f.buttons do%>
-    <%= link_to "Cancel", :back %>
-    <%=f.commit_button %>
+    <%= f.cancel_link %>
+    <%= f.commit_button %>
   <% end %>
 <% end %>
