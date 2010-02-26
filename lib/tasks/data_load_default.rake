@@ -24,7 +24,7 @@ namespace :data do
           u.first_name = user[0]
           u.last_name = user[1]
           u.email = user[2]
-          u.role = 'admin'
+          u.role = 'Admin'
           u.save(false)
         end
       end
