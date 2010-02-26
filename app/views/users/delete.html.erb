@@ -1,0 +1,9 @@
+<% title 'Delete User' %>
+<p>Are you certain you wish to delete '<%= @user.full_name %>'?</p>
+
+<% semantic_form_for @user, :url => user_path(@user), :html => {:method => :delete} do |f| %>
+  <% f.buttons do %>
+    <%= f.commit_button 'Delete'%>
+    <%= f.cancel_link %>
+  <% end %>
+<% end %>

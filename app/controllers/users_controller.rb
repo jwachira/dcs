@@ -88,7 +88,18 @@ class UsersController < ApplicationController
       end
     end
   end
+  
+  # GET /users/1/delete
+  # GET /users/1/delete.xml
+  def delete
+    @user = User.find(params[:id])
 
+    respond_to do |format|
+      format.html # delete.html.erb
+      format.xml  { render :xml => @user }
+    end
+  end
+  
   # DELETE /users/1
   # DELETE /users/1.xml
   def destroy
