@@ -228,54 +228,7 @@ table.data td {
   padding: 5px;
   }
  
-/* FORMS
---------------------------------------------------------------------- */
-form.error_handling{
-  color:#333;
-}
- 
-form.error_handling fieldset {
-  margin-bottom: 10px;
-  border:1px solid #ccc;
-}
- 
-form.error_handling legend {
-  margin: 0 0 0px 20px;
-  font-weight: bold;
- 
-}
- 
-form.error_handling label {
- 
-}
- 
-form.error_handling ol {
-  list-style-type: none;
-}
- 
-form.error_handling ol li{
-  clear:both;
-  position:relative;
-}
- 
-form.error_handling ol label{
-  display:block; 
-  float:left; 
-  width:100px; 
-  padding:3px 0;
-  margin: 0 10px 0 0;
-  text-align: right;
-  font-weight: bold;
-  color: #333;
-}
- 
- 
-form.error_handling ol label span{
-  float:left;  
-  font-size:10px;
-  color:#999;
-}
- 
+
 .feedback{
   position:absolute;
   height:25px;
@@ -293,49 +246,6 @@ form.error_handling ol label span{
   right:0;
   left:200px;
   width:10em;
-}
- 
-form.error_handling ol label em,.required{
-  color: #F00;
-}
- 
-form.error_handling ol fieldset{
-  border:1px solid #ddd;
-  margin:0 10px;  
-}
- 
-form.error_handling ol fieldset legend{
-  clear:both;
-   margin:0 0 0 10px;
-  font-weight: bold;
-}
- 
-form.error_handling ol li p.desc{
-  padding: 10px 0 0 5px;
-}
- 
-form.error_handling input[type=text],input[type=password],.error {
-  display:block; 
-  float:left; 
-  padding:3px; 
-  width:260px; 
-  margin:5px 0 7px 0;
-  border:1px solid #ccc;
-  outline:none;
-}
- 
-form.error_handling input[type=text]:hover,input[type=password]:hover, input[type=text]:focus,input[type=password]:focus, input[type=text]:active,,input[type=password]:active { 
-  border-color:#aaa; 
-  background:#eee;
-}
- 
-form.error_handling .error {
-  border:1px solid #960000;
-  background:#FF585B;
-}
- 
-.error:hover, .error:focus, .error:active { 
-  background:#fff;
 }
  
 input#submit{
