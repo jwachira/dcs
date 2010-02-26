@@ -24,28 +24,32 @@
 
 =end Schema Information
 
-class User < ActiveRecord::Base
-  acts_as_authentic
+class User < ApplicationModel
+  ROLES = ['Admin','User']
+  
+  acts_as_authentic do |c|
+    c.validate_password_field = false
+  end
+  
   model_stamper
   stampable
   
-  ROLES = ['Admin','User']
+  attr_protected :password, :password_confirmation, :role
+  
+  validates_presence_of :first_name, :last_name, :email, :role
   
   attr_protected :password
+  validates_confirmation_of :password
   validates_length_of :password, :minimum => 6, :allow_nil => true
   validates_format_of :password, :with => /[a-z]/i, :allow_nil => true, :message => "must include a letter"
   validates_format_of :password, :with => /[0-9]/, :allow_nil => true, :message => "must include a number"
 
-  attr_protected :password, :password_confirmation, :role
   
-  # The necessary method for the plugin to find out about the role symbols
+  # This method is necessary method for declarative_authorization to determine roles
   # Roles returns e.g. [:admin]
-  
   def role_symbols
     @role_symbols ||= (!role.nil?) ? [role.downcase.to_sym] : []
   end
-
-  # End of declarative_authorization code
     
   def full_name
     "#{first_name} #{last_name}"
