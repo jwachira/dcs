@@ -35,11 +35,14 @@ class ApplicationController < ActionController::Base
 
     rescue_from Authorization::NotAuthorized, :with => :not_authorized
     def not_authorized
+      request.format = :html
       render :template => "errors/403", :status => 403
     end
 
-    rescue_from ActiveRecord::RecordNotFound, ActionController::RoutingError, :with => :record_not_found
+    rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
+    rescue_from ActionController::RoutingError, :with => :record_not_found if RAILS_ENV != 'development' # Authlogic & cache_classes don't play well in this context
     def record_not_found
+      request.format = :html
       render :template => "errors/404", :status => 404
     end
 end
