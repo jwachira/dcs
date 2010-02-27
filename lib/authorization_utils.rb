@@ -1,10 +1,14 @@
 module AuthorizationUtils
   private
-
+  
   def require_login
     unless current_user
       store_location
-      flash[:error] = "You must be logged in to access that page"
+      if current_user_session && current_user_session.stale?
+        flash[:error] = "Your session has expired. Please log in again."
+      else
+        flash[:error] = "You must be logged in to access that page."
+      end
       redirect_to login_url
       return false
     end
