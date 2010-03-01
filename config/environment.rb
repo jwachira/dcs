@@ -23,10 +23,6 @@ Rails::Initializer.run do |config|
   # Specify gems that this application depends on. 
   # They can then be installed with "rake gems:install" on new installations.
   # You have to specify the :lib option for libraries, where the Gem name (sqlite3-ruby) differs from the file itself (sqlite3)
-  config.gem 'authlogic',                   :version => '2.1.3'
-  config.gem 'formtastic',                  :version => '0.9.7'
-  config.gem 'declarative_authorization',   :version => '0.4'
-  config.gem 'paperclip',                   :version => '2.3.1.1'
   # config.gem 'hoptoad_notifier'
   
   # Only load the plugins named here, in the order given. By default, all plugins 

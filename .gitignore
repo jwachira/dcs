@@ -5,3 +5,4 @@ config/database.yml
 .project
 .DS_Store
 db/schema.rb
+.bundle
