@@ -1,0 +1,17 @@
+## WestEd Config YAML
+# Reads in configuration yaml based on RAILS_ENV environment 
+# and sets up ::WeConfig variable where base key becomes a method
+# 
+# Contents are parsed by ERB so <%= 'foo' %> will work  
+#
+# development:
+#   foo: one    # ::WeConfig.foo = 'one'
+#   bar:        # ::WeConfig.bar = {"apple"=>1,"banana"=>2}
+#     apple: 1
+#     banana: 2
+# staging:
+#   foo: two    # ::WeConfig.foo = 'two'
+# test:
+#   foo: three  # ::WeConfig.foo = 'three'
+# production:
+#   foo: four   # ::WeConfig.foo = 'four'
