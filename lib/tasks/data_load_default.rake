@@ -14,7 +14,7 @@ namespace :data do
                   ['James',  'Wachira',    'jwachir@wested.org'],
                   ['Bob',    'Burbach',    'bburbac@wested.org'],
                   ['Joel',   'Henderson',  'jhender@wested.org'],
-                  ['Tim',    'Harrison',   'jhender@wested.org'],
+                  ['Tim',    'Harrison',   'tharris4@wested.org'],
                   ['Brian',  'Case',       'bcase@wested.org'  ],
                   ['Dave',   'Augustine',  'daugust@wested.org'],
                 ]
