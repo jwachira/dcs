@@ -12,7 +12,7 @@ gem 'mysql',              :bundle => false
 
 gem 'bundler',                         '0.9.7'
 gem 'authlogic',                       '2.1.3'
-gem 'formtastic',                      '0.9.7'
+gem 'formtastic',                      '0.9.7', :require => nil
 gem 'declarative_authorization',       '0.4'
 gem 'paperclip',                       '2.3.1.1'
  
