@@ -29,13 +29,11 @@ class ApplicationController < ActionController::Base
   protected
 
     # Define how declarative authentication responds to permission denied.
-    # def permission_denied
-    #   raise Authorization::NotAuthorized
-    # end
+    def permission_denied
+      raise Authorization::NotAuthorized
+    end
   
   private
-
-    # rescue_from Authorization::NotAuthorized, :with => :not_authorized
     rescue_from Exception, :with => :server_error if RAILS_ENV != 'development'
     def server_error(exception)
       notify_hoptoad(exception) if respond_to?(:notify_hoptoad)
@@ -43,6 +41,8 @@ class ApplicationController < ActionController::Base
       request.format = :html
       render :template => "errors/500", :status => 500
     end
+  
+    rescue_from Authorization::NotAuthorized, :with => :not_authorized
     def not_authorized
       request.format = :html
       render :template => "errors/403", :status => 403
