@@ -5,6 +5,7 @@
 # after
 
 source :gemcutter
+source 'http://gems.github.com'
 
 gem 'rails',              '2.3.5',  :require => nil
 gem 'rack',               '1.0.1'
@@ -29,7 +30,7 @@ end
 
 group :metrics do
   gem 'bundler',                         '0.9.7'
-  # gem 'relevance-rcov',   '0.9.0',    :require => 'rcov'
+  gem 'relevance-rcov',   '0.9.0',    :require => 'rcov'
   gem 'metric_fu'
   gem 'churn'
   gem 'Saikuro'
