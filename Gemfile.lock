@@ -22,6 +22,8 @@ dependencies:
     group: 
     - :default
     version: = 0.9.7
+    require: []
+
   rack: 
     group: 
     - :default
@@ -57,7 +59,7 @@ specs:
     version: 2.3.5
 - declarative_authorization: 
     version: "0.4"
-hash: fd3fd632e6af36358c49d70d6bc732392c2634e9
+hash: d44e85137787b72398dfee252d1dc7c35b81e3dc
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
