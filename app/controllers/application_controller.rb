@@ -36,6 +36,13 @@ class ApplicationController < ActionController::Base
   private
 
     # rescue_from Authorization::NotAuthorized, :with => :not_authorized
+    rescue_from Exception, :with => :server_error if RAILS_ENV != 'development'
+    def server_error(exception)
+      notify_hoptoad(exception) if respond_to?(:notify_hoptoad)
+    
+      request.format = :html
+      render :template => "errors/500", :status => 500
+    end
     def not_authorized
       request.format = :html
       render :template => "errors/403", :status => 403
