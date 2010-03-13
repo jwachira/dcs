@@ -10,7 +10,6 @@ gem 'rails',              '2.3.5',  :require => nil
 gem 'rack',               '1.0.1'
 gem 'mysql',              :bundle => false
 
-gem 'bundler',                         '0.9.7'
 gem 'authlogic',                       '2.1.3'
 gem 'formtastic',                      '0.9.7', :require => nil
 gem 'declarative_authorization',       '0.4'
@@ -29,6 +28,7 @@ group :test do
 end
 
 group :metrics do
+  gem 'bundler',                         '0.9.7'
 	gem 'relevance-rcov',		'0.9.0',	  :require => 'rcov'
   gem 'metric_fu'
   gem 'churn'
