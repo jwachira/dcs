@@ -16,8 +16,8 @@ gem 'declarative_authorization',       '0.4'
 gem 'paperclip',                       '2.3.1.1'
  
 group :development do
-	gem 'ruby-debug'
-	gem 'ruby-debug-base'
+  gem 'ruby-debug'
+  gem 'ruby-debug-base'
 end
 
 group :test do
@@ -29,7 +29,7 @@ end
 
 group :metrics do
   gem 'bundler',                         '0.9.7'
-	gem 'relevance-rcov',		'0.9.0',	  :require => 'rcov'
+  # gem 'relevance-rcov',   '0.9.0',    :require => 'rcov'
   gem 'metric_fu'
   gem 'churn'
   gem 'Saikuro'
