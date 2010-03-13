@@ -17,6 +17,7 @@ namespace :data do
                   ['Tim',    'Harrison',   'jhender@wested.org'],
                   ['Brian',  'Case',       'bcase@wested.org'  ],
                   ['Dave',   'Augustine',  'daugust@wested.org'],
+                  ['Ray',    'Baxter',     'rbaxter@wested.org']
                 ]
 
         users.each do |user|
