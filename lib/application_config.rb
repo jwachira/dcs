@@ -1,9 +1,9 @@
 require 'ostruct'
 require 'yaml'
 
-unless defined?(::WeConfig)
+unless defined?(::ApplicationConfig)
   config_hash = {}
-  config_file = File.join(RAILS_ROOT, 'config', 'we_config.yml')
+  config_file = File.join(RAILS_ROOT, 'config', 'application_config.yml')
   if File.exist?(config_file)
     if (contents = YAML::load(ERB.new(IO.read(config_file)).result)) and (not contents.nil?)  
       if contents.has_key? Rails.env.downcase
@@ -12,5 +12,5 @@ unless defined?(::WeConfig)
       config_hash.merge! contents
     end
   end
-  ::WeConfig = OpenStruct.new(config_hash)
+  ::ApplicationConfig = OpenStruct.new(config_hash)
 end

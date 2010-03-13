@@ -1,0 +1,17 @@
+## Application Config YAML
+# Reads in configuration yaml based on RAILS_ENV environment 
+# and sets up ApplicationConfig class where base key becomes a method
+# 
+# Contents are parsed by ERB so <%= 'foo' %> will work  
+#
+# development:
+#   foo: one    # ApplicationConfig.foo = 'one'
+#   bar:        # ApplicationConfig.bar = {"apple"=>1,"banana"=>2}
+#     apple: 1
+#     banana: 2
+# staging:
+#   foo: two    # ApplicationConfig.foo = 'two'
+# test:
+#   foo: three  # ApplicationConfig.foo = 'three'
+# production:
+#   foo: four   # ApplicationConfig.foo = 'four'
