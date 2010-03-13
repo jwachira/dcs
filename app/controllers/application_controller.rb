@@ -29,13 +29,13 @@ class ApplicationController < ActionController::Base
   protected
 
     # Define how declarative authentication responds to permission denied.
-    def permission_denied
-      raise Authorization::NotAuthorized
-    end
+    # def permission_denied
+    #   raise Authorization::NotAuthorized
+    # end
   
   private
 
-    rescue_from Authorization::NotAuthorized, :with => :not_authorized
+    # rescue_from Authorization::NotAuthorized, :with => :not_authorized
     def not_authorized
       request.format = :html
       render :template => "errors/403", :status => 403
