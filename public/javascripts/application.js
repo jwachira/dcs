@@ -9,3 +9,7 @@ $("li.calendar input").datepicker({
   buttonImage: '/images/calendar.png',
   buttonImageOnly: true
 });
+
+function unimplemented() {
+  alert("This feature is not implemented yet.");
+}
