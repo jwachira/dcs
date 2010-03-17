@@ -1,8 +1,17 @@
 class ApplicationFormBuilder < Formtastic::SemanticFormBuilder
   # Custom form builder methods go here
   
-  def cancel_link(text = 'Cancel')
-    template.link_to text, :back
+  def cancel_link(options = {})
+    location = options[:url] || template.request.params[:_cancel_url] || template.request.referer || '/'
+    template.hidden_field_tag(:_cancel_url, location)
+    
+    if location =~ /\?/
+      location = location + '&_cancel=1'
+    else
+      location = location + '?_cancel=1'
+    end
+    
+    template.content_tag(:li, template.link_to('Cancel', location), :class => "cancel" )
   end
   
   def calendar_input(method, options)

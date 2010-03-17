@@ -3,9 +3,7 @@
 <% else %>
   <% title 'Edit User' %>
 <% end %>
+
 <% semantic_form_for @user, :url => user_path do |f| %>
   <%= render :partial => "form", :locals => {:f => f} %>
-  <% f.buttons do %>
-    <%= link_to "Cancel", :back %><%= f.commit_button %>
-  <% end %>
 <% end %>

@@ -26,8 +26,19 @@ class ApplicationController < ActionController::Base
     User.stamper ||= current_user
   end
   
+  before_filter :cancel_message
+  
   protected
-
+    def cancel_message
+      if params[:_cancel]
+        flash[:notice] = 'Action cancelled.'
+        redirect_to url_for(params.except("_cancel"))
+        false
+      else
+        true
+      end
+    end
+  
     # Define how declarative authentication responds to permission denied.
     def permission_denied
       raise Authorization::NotAuthorized
