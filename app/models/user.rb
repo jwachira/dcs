@@ -37,7 +37,7 @@ class User < ApplicationModel
   attr_protected :password, :password_confirmation, :role
   
   validates_presence_of :first_name, :last_name, :email, :role
-  
+  attr_accessor :current_password
   attr_protected :password
   validates_confirmation_of :password
   validates_length_of :password, :minimum => 6, :allow_nil => true

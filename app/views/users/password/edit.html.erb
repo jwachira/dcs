@@ -2,6 +2,7 @@
 <% semantic_form_for @user, :url => user_password_path(@user) do |f| %>
   <%= password_instructions %>
   <% f.inputs do %>
+    <%= f.input :current_password %>
     <%= f.input :password %>
     <%= f.input :password_confirmation %>
   <% end %>
