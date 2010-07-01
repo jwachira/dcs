@@ -8,8 +8,8 @@ source :gemcutter
 source 'http://gems.github.com'
 
 gem 'rails',              '2.3.8',  :require => nil
-gem 'rack',               '1.0.1'
-gem 'mysql',              :bundle => false
+gem 'rack',               '1.1.0'
+gem 'mysql'#,              :bundle => false
 
 gem 'authlogic',                       '2.1.3'
 gem 'formtastic',                      '0.9.7', :require => nil
@@ -29,7 +29,7 @@ group :test do
 end
 
 group :metrics do
-  gem 'bundler',                         '0.9.7'
+  gem 'bundler',                         '0.9.24'
   gem 'relevance-rcov',   '0.9.0',    :require => 'rcov'
   gem 'metric_fu'
   gem 'churn'

@@ -7,7 +7,7 @@ dependencies:
   rails: 
     group: 
     - :default
-    version: = 2.3.5
+    version: = 2.3.8
     require: []
 
   authlogic: 
@@ -37,7 +37,7 @@ dependencies:
   rack: 
     group: 
     - :default
-    version: = 1.0.1
+    version: = 1.1.0
   formtastic: 
     group: 
     - :default
@@ -57,7 +57,7 @@ dependencies:
   bundler: 
     group: 
     - :metrics
-    version: = 0.9.7
+    version: = 0.9.24
   reek: 
     group: 
     - :metrics
@@ -79,85 +79,85 @@ dependencies:
     - :metrics
     version: = 1.4.0
 specs: 
+- rake: 
+    version: 0.8.7
+- Saikuro: 
+    version: 1.1.0
 - activesupport: 
-    version: 2.3.5
-- chronic: 
-    version: 0.2.3
+    version: 2.3.8
+- rack: 
+    version: 1.1.0
+- actionpack: 
+    version: 2.3.8
 - actionmailer: 
-    version: 2.3.5
-- json_pure: 
-    version: 1.2.3
+    version: 2.3.8
+- activerecord: 
+    version: 2.3.8
+- activeresource: 
+    version: 2.3.8
 - arrayfields: 
     version: 4.7.4
-- linecache: 
-    version: "0.43"
-- ruby-debug-base: 
-    version: 0.10.3
+- authlogic: 
+    version: 2.1.3
 - bundler: 
-    version: 0.9.7
-- ruby_parser: 
+    version: 0.9.24
+- json_pure: 
+    version: 1.4.3
+- rubyforge: 
     version: 2.0.4
-- ruby2ruby: 
-    version: 1.2.4
-- reek: 
-    version: 1.2.7.1
-- rcov: 
-    version: 0.9.8
+- hoe: 
+    version: 2.6.1
+- chronic: 
+    version: 0.2.3
 - hirb: 
-    version: 0.3.0
+    version: 0.3.2
 - fattr: 
     version: 2.1.0
 - main: 
     version: 4.2.0
-- formtastic: 
-    version: 0.9.7
-- rack: 
-    version: 1.0.1
-- actionpack: 
-    version: 2.3.5
-- relevance-rcov: 
-    version: 0.9.0
-- Saikuro: 
-    version: 1.1.0
-- rubyforge: 
+- sexp_processor: 
+    version: 3.0.4
+- ruby_parser: 
     version: 2.0.4
-- roodi: 
-    version: 2.1.0
 - churn: 
     version: 0.0.12
-- metric_fu: 
-    version: 1.3.0
-- mysql: 
-    version: 2.8.1
-- rake: 
-    version: 0.8.7
-- gemcutter: 
-    version: 0.5.0
-- hoe: 
-    version: 2.5.0
-- sexp_processor: 
-    version: 3.0.3
+- columnize: 
+    version: 0.3.1
+- rails: 
+    version: 2.3.8
+- declarative_authorization: 
+    version: "0.4"
 - flay: 
     version: 1.4.0
 - flog: 
     version: 2.2.0
-- authlogic: 
-    version: 2.1.3
-- columnize: 
-    version: 0.3.1
-- activerecord: 
-    version: 2.3.5
+- formtastic: 
+    version: 0.9.7
+- linecache: 
+    version: "0.43"
+- ruby2ruby: 
+    version: 1.2.4
+- rails_best_practices: 
+    version: 0.3.21
+- rcov: 
+    version: 0.9.8
+- reek: 
+    version: 1.2.7.1
+- roodi: 
+    version: 2.1.0
+- metric_fu: 
+    version: 1.4.0
+- mysql: 
+    version: 2.8.1
 - paperclip: 
     version: 2.3.1.1
+- relevance-rcov: 
+    version: 0.9.0
+- ruby-debug-base: 
+    version: 0.10.3
 - ruby-debug: 
     version: 0.10.3
-- activeresource: 
-    version: 2.3.5
-- rails: 
-    version: 2.3.5
-- declarative_authorization: 
-    version: "0.4"
-hash: 61ba8eed5d4bce23c6f911aa94f335bb2162bf04
+hash: 2ff4d7d22033b2332470d58ef7a01c155e3ab3ec
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
