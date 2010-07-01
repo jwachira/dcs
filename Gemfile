@@ -7,7 +7,7 @@
 source :gemcutter
 source 'http://gems.github.com'
 
-gem 'rails',              '2.3.5',  :require => nil
+gem 'rails',              '2.3.8',  :require => nil
 gem 'rack',               '1.0.1'
 gem 'mysql',              :bundle => false
 
