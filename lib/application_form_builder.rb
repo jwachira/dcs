@@ -17,6 +17,6 @@ class ApplicationFormBuilder < Formtastic::SemanticFormBuilder
   def calendar_input(method, options)
     # don't want to use #{method}_before_type_cast; want to get the value after it has been formatted
     options[:value] ||= @object.send(method).try(:to_s, :mdy)
-    label(method, options.delete(:label), options.slice(:required)) + text_field(method, options)
+    label(method, options.delete(:label), options.slice(:required)) + text_field(method, options.except(:required))
   end
 end
