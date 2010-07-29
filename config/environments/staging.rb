@@ -19,22 +19,13 @@ ActionMailer::Base.delivery_method = :sendmail
 
 ActionMailer::Base.raise_delivery_errors = true
 
-hostname = Socket.gethostname
-# Determine our project name and iteration from our directory.                                                              
-if RAILS_ROOT =~ /\/var\/www\/apps\/([^\/]+)\/([^\/]+)\/releases/
-  project = $1
-  iteration = $2
-  @staging_host = "#{iteration}.#{project}.#{hostname}"
-else
-  raise "Failed to parse hostname and iteration from RAILS_ROOT(#{RAILS_ROOT}).  Please configure config/staging.rb"
-end
 
 ActionMailer::Base.smtp_settings = {
   :address => "localhost",
   :port    => 25,
-  :domain  => @staging_host
+  :domain  => tenantcamp.com
 }
 
 ActionMailer::Base.default_url_options = {
-  :host => @staging_host
+  :host => tenantcamp.com
 }

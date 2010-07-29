@@ -25,7 +25,10 @@
 =end Schema Information
 
 class User < ApplicationModel
-  ROLES = ['Admin','User']
+  
+  belongs_to :property_group
+  
+  ROLES = ['Admin','Site Manager', 'Property Group Manager', 'Maintainance Man', 'Tenant']
   
   acts_as_authentic do |c|
     c.validate_password_field = false

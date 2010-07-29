@@ -1,0 +1,2 @@
+module PropertySitesHelper
+end

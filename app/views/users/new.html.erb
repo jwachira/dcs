@@ -1,4 +1,4 @@
-<% title 'New User' %>
+<% title 'New User', :body => true %>
 <% semantic_form_for @user do |f| %>
   <%= render :partial => "form", :locals => {:f => f} %>
 <% end %>

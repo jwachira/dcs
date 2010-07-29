@@ -1,6 +1,13 @@
 module LayoutHelper
-  def title(title)
-    content_for(:title, title)
+  
+  def title(text, options = {})
+    options.symbolize_keys!
+
+    content_for :title, text
+
+    if options[:body] == true
+     content_for :h1_tag, content_tag(:h1, text)
+    end
   end
   
   def side_bar(partial, grantee = nil)

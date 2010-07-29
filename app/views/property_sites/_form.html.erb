@@ -1,0 +1,10 @@
+<% f.inputs do %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :street_address %>
+  <%= f.input :city %>
+  <%= f.input :postal_code %>
+  <%= f.input :state %>
+  <%= f.input :country %>
+  <%= f.input :property_group, :collection => PropertyGroup.active, :as => :select %>
+<% end %>

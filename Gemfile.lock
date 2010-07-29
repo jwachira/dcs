@@ -57,7 +57,7 @@ dependencies:
   bundler: 
     group: 
     - :metrics
-    version: = 0.9.24
+    version: = 0.9.26
   reek: 
     group: 
     - :metrics
@@ -100,7 +100,7 @@ specs:
 - authlogic: 
     version: 2.1.3
 - bundler: 
-    version: 0.9.24
+    version: 0.9.26
 - json_pure: 
     version: 1.4.3
 - rubyforge: 
@@ -138,7 +138,7 @@ specs:
 - ruby2ruby: 
     version: 1.2.4
 - rails_best_practices: 
-    version: 0.3.21
+    version: 0.3.26
 - rcov: 
     version: 0.9.8
 - reek: 
@@ -146,7 +146,7 @@ specs:
 - roodi: 
     version: 2.1.0
 - metric_fu: 
-    version: 1.4.0
+    version: 1.5.1
 - mysql: 
     version: 2.8.1
 - paperclip: 
@@ -157,7 +157,7 @@ specs:
     version: 0.10.3
 - ruby-debug: 
     version: 0.10.3
-hash: 2ff4d7d22033b2332470d58ef7a01c155e3ab3ec
+hash: cf2aa8cb28793d0b5d4615a4d15a34eb0aa8d609
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org
