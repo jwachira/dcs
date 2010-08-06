@@ -1,2 +1,0 @@
-class PropertySitesController < ApplicationController
-end

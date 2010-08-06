@@ -15,7 +15,9 @@ gem 'authlogic',                       '2.1.3'
 gem 'formtastic',                      '0.9.7', :require => nil
 gem 'declarative_authorization',       '0.4'
 gem 'paperclip',                       '2.3.1.1'
- 
+gem 'userstamp'
+gem 'annotate',                        '2.4.0'
+
 group :development do
   gem 'ruby-debug'
   gem 'ruby-debug-base'
