@@ -17,6 +17,7 @@ gem 'declarative_authorization',       '0.4'
 gem 'paperclip',                       '2.3.1.1'
 gem 'userstamp'
 gem 'annotate',                        '2.4.0'
+# gem 'resource_controller'
 
 group :development do
   gem 'ruby-debug'

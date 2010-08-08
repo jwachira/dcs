@@ -1,9 +1,0 @@
-<% title "New Property Group", :body => true %>
-
-<% semantic_form_for @property_group, :url => collection_path do |f| %>
-  <%= render 'form', :f => f %>
-  <% f.buttons do %>
-    <%= f.commit_button 'Create'%>
-    <%= f.cancel_link %>
-  <% end %>
-<% end %>

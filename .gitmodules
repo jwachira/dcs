@@ -1,1 +1,4 @@
 
+[submodule "vendor/plugins/resource_controller"]
+	path = vendor/plugins/resource_controller
+	url = git://github.com/jamesgolick/resource_controller.git

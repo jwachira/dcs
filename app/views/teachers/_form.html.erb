@@ -1,0 +1,20 @@
+<% f.inputs do %>
+  <%= f.input :first_name  %>
+  <%= f.input :middle_name %>
+  <%= f.input :last_name %>
+  <%= f.input :gender %>
+  <%= f.input :date_of_birth %>
+  <%= f.input :street_address %>
+  <%= f.input :city %>
+  <%= f.input :state %>
+  <%= f.input :postal_code %>
+  <%= f.input :phone_number %>
+  <%= f.input :email %>
+  <%= f.input :degree %>
+  <%= f.input :field_of_study %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :years, :as => :numeric %>
+  <%= f.input :provider, :as => :hidden %>
+  <%= f.input :active, :wrapper_html => {:class => "agree_to_terms"} %>
+<% end %>

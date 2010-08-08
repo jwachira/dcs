@@ -1,9 +1,0 @@
-<% title "Editing Property Site", :body => true %>
-
-<% semantic_form_for @property_site, :url => object_path do |f| %>
-  <%= render 'form', :f => f %>
-  <% f.buttons do %>
-    <%= f.commit_button 'Update'%>
-    <%= f.cancel_link %>
-  <% end %>
-<% end %>

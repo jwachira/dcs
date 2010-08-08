@@ -8,3 +8,222 @@ For example, to make the inline hint paragraphs a little darker in color than th
 form.formtastic fieldset ol li p.inline-hints { color:#333; }
 
 --------------------------------------------------------------------------------------------------*/
+
+
+form.formtastic fieldset ol li p.inline-hints { 
+  margin-left:0px;
+  color:#333; 
+}
+form.formtastic fieldset ol li p.inline-errors { 
+  margin-left:0px;
+}
+
+form.formtastic fieldset {
+  font-family: athelas-1, athelas-2, Georgia, serif;
+  display: block;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+form.formtastic legend,
+form.formtastic label {
+  color: #555;
+  }
+form.formtastic fieldset legend span {
+  color:#376D00;
+  font-weight:bold;
+  vertical-align: baseline;
+  font-size: 1.4em;
+  text-shadow: #CCC 1px 1px 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: apertura-condensed-1, apertura-condensed-2, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-size: 1.5em;
+  line-height: 1em;
+  margin-bottom:5px;
+}
+
+form.formtastic fieldset.inputs ol li {
+  border-bottom: none;
+  }
+form.formtastic fieldset.inputs li.hidden {
+  display: none;
+  }
+form.formtastic > fieldset.inputs > ol {
+  margin-bottom: 30px;
+  width: 100%;
+  }  
+form.formtastic fieldset ol,
+form.formtastic fieldset ol li fieldset ol {
+  width: 100%;
+  }  
+form.formtastic > fieldset.inputs > ol > li > label,
+form.formtastic fieldset.inputs legend,
+form.formtastic fieldset.inputs ol li.radio fieldset legend {
+  display: block;
+  float: none;
+  margin-bottom: 8px;
+  width: 100%;
+  }
+
+
+form.formtastic > fieldset.inputs > ol > li {
+/*  background: #b9cf6a;*/
+/*  background:#EFF6E8;*/
+  background:#F5F9ED;
+  display: block;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 8px 10px 6px 10px;
+  }
+form.formtastic fieldset.inputs ol li input {
+  color: #434343;
+  }  
+form.formtastic > fieldset.inputs > ol > li > a {
+  display: block;
+  }
+form.formtastic > fieldset.inputs > ol > li > label,
+form.formtastic > fieldset.inputs > ol > li > fieldset > legend.label {
+  overflow: hidden;
+/*  text-transform: uppercase;*/
+  }
+
+ 
+form.formtastic fieldset.inputs ol li.string input,
+form.formtastic fieldset.inputs ol li.datetime input,
+form.formtastic fieldset.inputs ol li.password input,
+form.formtastic fieldset.inputs ol li.numeric input,
+form.search li.string input {
+  border: 2px solid #7AA13D;
+  padding: 5px;
+  width:350px;
+  }
+form.formtastic fieldset.inputs ol li.numeric input {
+  width:250px;
+}
+form.formtastic fieldset.inputs ol li.string input:focus {
+  border: 2px solid #7AA13D;
+  padding: 5px;
+  }
+form.formtastic fieldset.inputs ol li.check_boxes li {
+  margin-right: 20px;
+  padding: 0;
+  } 
+form.formtastic fieldset.inputs ol li.check_boxes label {
+  line-height: 19px;
+  padding-left: 0;
+  width:auto;
+  }
+form.formtastic fieldset.inputs ol li.radio fieldset legend label {
+  width:auto;
+  clear:bottom;
+  }
+    
+form.formtastic fieldset.inputs ol li.radio fieldset ol {
+  width: 100%;
+  }
+form.formtastic fieldset.inputs ol li.radio fieldset ol li {
+  display: block;
+  float: none;  
+  width: 100%;
+  }
+form.formtastic fieldset.inputs ol li.agree_to_terms label{
+  padding-left: 0;
+}
+/*check boxes*/
+form.formtastic fieldset.inputs ol li.check_boxes fieldset legend, 
+form.formtastic fieldset.inputs ol li.check_boxes fieldset legend label {
+  display: block;
+  margin-bottom: 0;
+  position: relative;
+}
+    
+form.formtastic fieldset.inputs ol li.check_boxes fieldset ol {
+  padding-left: 0;
+}
+
+form.formtastic fieldset.inputs ol li.check_boxes fieldset ol li {
+  margin-bottom: 1em;
+}
+/*end of checkboxes*/
+/*radio buttons*/
+form.formtastic fieldset.inputs ol li.radio fieldset legend, 
+form.formtastic fieldset.inputs ol li.radio fieldset legend label {
+  display: block;
+  margin-bottom: 0;
+  position: relative;
+}
+form.formtastic fieldset.inputs ol li.radio fieldset ol {
+  padding-left: 0;
+}
+
+form.formtastic fieldset.inputs ol li.radio fieldset ol li {
+  margin-bottom: 1em;
+}
+/*end of radiobuttons*/
+/* BUTTONS  */
+
+form.formtastic fieldset.buttons {
+  background: #EFF6E8;
+/*  border: 2px solid #ee8223;*/
+  margin-bottom: 30px;
+  padding-left: 10px;
+}
+form.formtastic fieldset.buttons ol {
+  line-height: 0;
+  }
+form.formtastic fieldset.buttons li {
+  margin-bottom: 0;
+  padding: 0;
+  }
+form.formtastic fieldset.buttons li input {
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.15, rgb(233,233,233)),
+      color-stop(0.56, rgb(255,255,255))
+  );
+  background-image: -moz-linear-gradient(
+      center bottom,
+      rgb(233,233,233) 15%,
+      rgb(255,255,255) 56%
+  );
+  border: 1px solid #878787;
+  -moz-border-radius: 3px; /* FF1+ */
+  -webkit-border-radius: 3px; /* Saf3+, Chrome */
+  -khtml-border-radius: 3px; /* Konqueror */
+  border-radius: 3px; /* Standard. IE9 */
+  color: #555555;
+  cursor: pointer;
+  }
+form.formtastic fieldset.buttons li.commit {
+  margin-top: 1px;
+  margin-left: 10px;
+  }
+form.formtastic fieldset.buttons li.commit:first-child {
+  margin-left: 0;
+  }  
+form.formtastic fieldset.buttons li.commit input {
+  border-width: 2px;
+  font-weight: bold;
+  }
+form.formtastic fieldset.buttons li.cancel,
+form.formtastic fieldset.buttons li.link {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 12px;
+  }
+form.formtastic fieldset.buttons li.cancel a,
+form.formtastic fieldset.buttons li.link a {
+  display: block;
+  }
+
+#errorExplanation {
+  margin-left:20px;
+/*  background:;*/
+}

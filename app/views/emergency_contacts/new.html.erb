@@ -1,0 +1,8 @@
+<% title 'New Emergency Contact', :body => true %>
+
+<% semantic_form_for(@emergency_contact) do |f| %>
+  <%= render 'form', :f => f %>
+  <% f.buttons do %>
+   <%= f.commit_button 'Submit' %>
+  <% end %>
+<% end %>

@@ -1,7 +1,6 @@
 <% title "Login", :body => true %>
 <div >
   <div id="login_container" class="span-25">
-  <h2>Login</h2>
   <% semantic_form_for @user_session,:url => user_session_path do |f| %>
     <% f.inputs do %>
       <%= f.input :email, :required => true %>

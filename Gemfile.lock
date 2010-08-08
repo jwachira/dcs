@@ -112,7 +112,7 @@ specs:
 - bundler: 
     version: 0.9.26
 - json_pure: 
-    version: 1.4.3
+    version: 1.4.5
 - rubyforge: 
     version: 2.0.4
 - hoe: 
@@ -169,7 +169,7 @@ specs:
     version: 0.10.3
 - userstamp: 
     version: 2.0.0
-hash: 03835e9a60e9dadc0b1cc940daa51afbc7b06b9a
+hash: 3ced08228d605ffabb03e9803ff7d15d25d70e0e
 sources: 
 - Rubygems: 
     uri: http://gemcutter.org

@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   # Integration of authorization
   include AuthorizationUtils
   helper_method :current_user_session, :current_user
-  before_filter :require_login
+  # before_filter :require_login
   
   # Userstamp configuration
   include Userstamp
