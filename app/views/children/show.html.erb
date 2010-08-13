@@ -1,5 +1,13 @@
 <% title "#{@child.full_name}", :body => true %>
 
+<% content_for :sidebar do %>
+  <ul>
+    <li><%= link_to 'Child Profile' %></li>
+    <li><%= link_to 'Finances'      %></li>
+    <li><%= link_to 'Schedule'      %></li>
+  </ul>
+<% end %>
+
 <%= link_to 'Family', child_family_child_path(@child) %>
 
 <p>First Name<br>
