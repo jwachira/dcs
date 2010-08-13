@@ -40,7 +40,7 @@ form.formtastic fieldset legend span {
 }
 form.formtastic fieldset.inputs ol li {
   border-bottom: none;
-  border-bottom:1px dotted rgba(0, 0, 0, 0.398438);
+/*  border-bottom:1px dotted rgba(0, 0, 0, 0.398438);*/
   }
 form.formtastic fieldset.inputs li.hidden {
   display: none;
