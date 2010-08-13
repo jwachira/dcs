@@ -1,6 +1,6 @@
 <% title "New child", :body => true %>
 
-<% semantic_form_for @child, :url => family_children_url(@family) do |f| %>
+<% semantic_form_for @child, :url => family_children_url(@family), :html => {:multipart => true} do |f| %>
   <%= render 'form', :f => f %>
   <% f.buttons do %>
    <%= f.commit_button 'Submit' %>

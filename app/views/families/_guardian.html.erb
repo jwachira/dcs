@@ -11,6 +11,7 @@
     <%= guardian_f.input :primary_phone_number %>
     <%= guardian_f.input :secondary_phone_number %>
     <%= guardian_f.input :relationship_to_child, :collection => Guardian::RELATIONSHIPS_TO_CHILD, :as => :select %>
+    <%= guardian_f.input :photo %>
     <%= guardian_f.input :ssn %>
   <% end %>
 <% end %>

@@ -1,6 +1,6 @@
 <% title "Editing #{@child.full_name}", :body => true %>
 
-<% semantic_form_for @child, :url => object_path do |f| %>
+<% semantic_form_for @child, :url => object_path, :html => {:multipart => true} do |f| %>
   <%= render 'form', :f => f %>
   <% f.buttons do %>
    <%= f.commit_button 'Update Child' %>
