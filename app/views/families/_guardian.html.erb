@@ -1,0 +1,16 @@
+<% f.inputs "Family Information" do %>
+  <% f.semantic_fields_for :guardians do |guardian_f| %>
+    <%= guardian_f.input :first_name  %>
+    <%= guardian_f.input :middle_name %>
+    <%= guardian_f.input :last_name %>
+    <%= guardian_f.input :date_of_birth %>
+    <%= guardian_f.input :street_address %>
+    <%= guardian_f.input :city %>
+    <%= guardian_f.input :state, :as => :state %>
+    <%= guardian_f.input :postal_code %>
+    <%= guardian_f.input :primary_phone_number %>
+    <%= guardian_f.input :secondary_phone_number %>
+    <%= guardian_f.input :relationship_to_child, :collection => Guardian::RELATIONSHIPS_TO_CHILD, :as => :select %>
+    <%= guardian_f.input :ssn %>
+  <% end %>
+<% end %>

@@ -1,8 +1,9 @@
 <% title 'New Provider', :body => true %>
-
+<%= link_to 'All Providers', providers_url %>
 <% semantic_form_for(@provider) do |f| %>
   <%= render 'form', :f => f %>
   <% f.buttons do %>
    <%= f.commit_button 'Submit' %>
+   <%= f.cancel_link %>
   <% end %>
 <% end %>

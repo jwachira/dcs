@@ -1,0 +1,5 @@
+<% title "#{@child.full_name} Family Information" %>
+
+<% @family.guardians.each do |guardian| %>
+ <li> <%= link_to guardian.full_name, guardian_family_url(guardian.family, guardian) %><li>
+<% end %>

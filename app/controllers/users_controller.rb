@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  filter_access_to :all
-  filter_access_to :edit, :update, :attribute_check => true
+  # filter_access_to :all
+  # filter_access_to :edit, :update, :attribute_check => true
 
   # GET /users
   def index
@@ -25,12 +25,14 @@ class UsersController < ApplicationController
   # POST /users
   def create
     @user = User.new
-    @user.email = params[:user][:email]
+    @user.email      = params[:user][:email]
     @user.first_name = params[:user][:first_name]
-    @user.last_name = params[:user][:last_name]
+    @user.last_name  = params[:user][:last_name]
+    @user.password   = params[:user][:password]
+    @user.password_confirmation = params[:user][:password_confirmation]
     
     ## need to limit role editing.
-    if permitted_to?(:set_role, @user)
+    if (permitted_to?(:set_role, @user) || @user.new_record?)
       @user.role = params[:user][:role]
     end
     

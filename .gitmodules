@@ -2,3 +2,6 @@
 [submodule "vendor/plugins/resource_controller"]
 	path = vendor/plugins/resource_controller
 	url = git://github.com/jamesgolick/resource_controller.git
+[submodule "vendor/plugins/us-state-select-plugin"]
+	path = vendor/plugins/us-state-select-plugin
+	url = git://github.com/jslag/us-state-select-plugin.git

@@ -2,9 +2,11 @@
   <%= f.input :first_name %> 
   <%= f.input :last_name %> 
   <%= f.input :email %>
-  <% if permitted_to?(:set_role, @user) %>
-    <%= f.input :role, :as => :select, :collection => User::ROLES %>
-  <% end %>
+  <%# if permitted_to?(:set_role, @user) %>
+  <%= f.input :role, :as => :select, :collection => User::ROLES %>
+  <%= f.input :password %>
+  <%= f.input :password_confirmation %>
+  <%# end %>
 <% end %>
 
 <% f.buttons do %>

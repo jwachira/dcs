@@ -1,0 +1,29 @@
+<% title 'Listing Children', :body => true %>
+
+<%= link_to 'Enroll New child', new_family_url %>
+
+<table class="data">
+  <thead>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Date Of Birth</th>
+    <th>Requires Special Carez</th>
+    <th>Immunized</th>
+    <th>Actions</th>
+    <th>
+  </thead>
+  <% @children.each do |child| %>
+    <tr>
+      <td><%= link_to child.first_name, child_url(child) %></td>
+      <td><%= link_to child.last_name  %></td>
+      <td><%= child.date_of_birth %></td>
+      <td><%= child.requires_special_care %></td>
+      <td><%= child.immunized? %></td>
+      <td><%= link_to 'Edit', edit_child_path(child) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
+

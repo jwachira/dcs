@@ -1,7 +1,7 @@
 class CreateEmergencyContacts < ActiveRecord::Migration
   def self.up
     create_table :emergency_contacts do |t|
-      t.references :child
+      t.references :family
       t.string :first_name
       t.string :last_name
       t.string :relationship_to_child 

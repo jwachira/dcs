@@ -1,8 +1,11 @@
-<% title 'New Teacher', :body => true %>
+<% title 'Adding New Teacher', :body => true %>
 
-<% semantic_form_for(@teacher) do |f| %>
+<% semantic_form_for @teacher, :url => provider_teachers_url(current_user.provider) do |f| %>
   <%= render 'form', :f => f %>
-  <% f.buttons do %>
-   <%= f.commit_button 'Submit' %>
-  <% end %>
+  <div class="button-col">
+    <% f.buttons do %>
+     <%= f.commit_button 'Submit' %>
+     <%= f.cancel_link %>
+    <% end %>
+  </div>
 <% end %>

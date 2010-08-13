@@ -1,8 +1,9 @@
 <% title 'New Emergency Contact', :body => true %>
 
-<% semantic_form_for(@emergency_contact) do |f| %>
+<% semantic_form_for @emergency_contact, :url => family_emergency_contacts_url(@family) do |f| %>
   <%= render 'form', :f => f %>
   <% f.buttons do %>
    <%= f.commit_button 'Submit' %>
+   <%= f.cancel_link %>
   <% end %>
 <% end %>

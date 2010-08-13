@@ -1,6 +1,7 @@
 class CreateProviders < ActiveRecord::Migration
   def self.up
     create_table :providers do |t|
+      t.references :user
       t.string :name
       t.string :street_address
       t.string :city

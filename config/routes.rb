@@ -11,8 +11,21 @@ ActionController::Routing::Routes.draw do |map|
     user.resource :password, :controller => "users/password"
   end
   
-  map.resources :emergency_contacts
-  map.resources :teachers
-  map.resources :families
-  map.resources :providers
+  map.resources :immunizations
+   
+  map.resources :children, :member => {:child_family => :get}
+
+  map.resources :families do |family|
+    family.resources :guardians
+    family.resources :emergency_contacts
+    family.resources :children
+  end
+  
+  map.resources :providers do |provider|
+    provider.resources :provider_contacts
+    provider.resources :teachers do |teacher|
+      teacher.resources :certifications
+    end
+  end
+  
 end

@@ -1,0 +1,9 @@
+<% title "Editing #{@emergency_contact.full_name}", :body => true %>
+
+<% semantic_form_for @emergency_contact, :url => family_emergency_contact_url(@family, @emergency_contact) do |f| %>
+  <%= render 'form', :f => f %>
+  <% f.buttons do %>
+   <%= f.commit_button 'Submit' %>
+   <%= f.cancel_link %>
+  <% end %>
+<% end %>

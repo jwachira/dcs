@@ -1,9 +1,10 @@
 <% f.inputs do %>
+  <%= f.error_messages %>
   <%= f.input :name %>
   <%= f.input :street_address %>
   <%= f.input :city %>
   <%= f.input :postal_code %>
-  <%= f.input :state %>
+  <%= f.input :state, :as => :state, :include_blank => true %>
   <%= f.input :phone_number %>
   <%= f.input :secondary_phone_number %>
   <%= f.input :fax %>

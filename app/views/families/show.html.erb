@@ -1,0 +1,26 @@
+<% title "Family Information", :body => true %>
+
+<%= link_to 'Add Child to Family', new_family_child_url(@family) %>
+
+<% @family.guardians.each do |guardian| %>
+ <%= guardian.full_name %>
+ <%= link_to 'Edit', edit_family_guardian_url(@family, guardian) %>
+<% end %>  
+
+<h3>Children</h3>
+
+<% @family.children.each do |child| %>
+  <li><%= link_to child.full_name, child_url(child) %>
+<% end %>
+
+<h3>Emergency Contacts</h3>
+
+<%= link_to 'Add Emergency Contact', new_family_emergency_contact_url(@family) %>
+
+<% @family.emergency_contacts.each do |ec| %>
+  <tr>
+    <td><%= ec.full_name    %></td>
+    <td><%= ec.primary_phone %></td>
+    <td><%= link_to 'Edit', edit_family_emergency_contact_url(@family, ec) %></td>
+  </tr>
+<% end %>

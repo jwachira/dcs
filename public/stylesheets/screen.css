@@ -155,8 +155,11 @@ blockquote {
   font-size: 22px;
   line-height: 18px;
   font-weight: bold;
-  color: #474a51;
   margin-bottom: 15px;
+  color:#444;
+  text-shadow: rgba(255, 255, 255, 0.796875) 0px 1px 0px;
+  padding-bottom:10px;
+  border-bottom:1px dotted #444;
   }
 #main .content h2 {
   font-size: 19px;

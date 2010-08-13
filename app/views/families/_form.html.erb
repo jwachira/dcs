@@ -1,15 +1,8 @@
-<% f.inputs do %>
-  <%= f.input :first_name  %>
-  <%= f.input :middle_name %>
-  <%= f.input :last_name %>
-  <%= f.input :date_of_birth %>
-  <%= f.input :street_address %>
-  <%= f.input :city %>
-  <%= f.input :state %>
-  <%= f.input :postal_code %>
-  <%= f.input :primary_phone_number %>
-  <%= f.input :secondary_phone_number %>
-  <%= f.input :relationship_to_child %>
-  <%= f.input :ssn %>
-  <%= f.input :active, :wrapper_html => {:class => "agree_to_terms"} %>
-<% end %>
+<%= f.error_messages %>
+<div class="left-col">
+<%= render :partial => "child",   :locals => {:f => f}  %>
+</div>
+
+<div class="right-col">
+<%= render :partial => "guardian", :locals => {:f => f} %>
+</div>

@@ -1,6 +1,6 @@
 class Users::PasswordController < ApplicationController
-  filter_access_to :all
-  filter_access_to :edit, :update, :attribute_check => true, :load_method => :object
+  # filter_access_to :all
+  # filter_access_to :edit, :update, :attribute_check => true, :load_method => :object
   
   def edit
     @user = object

@@ -1,0 +1,17 @@
+<% title "#{@provider.name}", :body => true %>
+
+<%= link_to 'Enroll Child', new_provider_family_url(current_user.provider) %><br>
+
+<%= link_to 'Add Teacher', new_provider_teacher_url(current_user.provider) %><br>
+
+Street Address: <%= @provider.street_address %><br/>
+City: <%= @provider.city         %> <br>
+Postal Code: <%= @provider.postal_code %> <br>
+State: <%= @provider.state        %> <br>
+Phone Number:<%= @provider.phone_number %> <br>
+Secondary Phone Number:<%= @provider.secondary_phone_number %> <br>
+Fax: <%= @provider.fax %> <br>
+License Number:<%= @provider.license_number %> <br>
+Licence Effective Date:<%= @provider.license_effective_date %> <br>
+License Expiry Date:<%= @provider.license_expiry_date %> <br>
+<%= link_to 'Edit', edit_provider_url(@provider) %> 

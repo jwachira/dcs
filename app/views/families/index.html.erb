@@ -1,0 +1,27 @@
+<% title "All Families", :body => true %>
+
+<%= link_to 'Enroll Child', new_family_url %>
+<table class="data">
+  <thead>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone Number</th>
+    <th>Relationship to Child</th>
+    <th colspan="2">Actions</th>
+  </thead>
+
+  <% @families.each do |family| %>
+   <% family.guardians.each do |guardian| %>
+      <tr>
+        <td><%= link_to guardian.first_name, family_url(guardian.family)           %></td>
+        <td><%= guardian.last_name             %></td>
+        <td><%= guardian.primary_phone_number  %></td>
+        <td><%= guardian.relationship_to_child %></td>
+        <td><%= link_to 'Edit', edit_family_path(family) %></td>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
+
+<br />
+

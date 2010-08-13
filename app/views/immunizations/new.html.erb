@@ -1,0 +1,9 @@
+<% title "Adding New Immunization Type", :body => true %>
+
+<% semantic_form_for @immunization, :url => immunizations_url do |f| %>
+  <%= render 'form', :f => f %>
+  <% f.buttons do %>
+   <%= f.commit_button 'Submit' %>
+   <%= f.cancel_link %>
+  <% end %>
+<% end %>

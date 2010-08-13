@@ -1,0 +1,48 @@
+<% title "#{@child.full_name}", :body => true %>
+
+<%= link_to 'Family', child_family_child_path(@child) %>
+
+<p>First Name<br>
+  <%= @child.first_name %>
+</p>
+
+<p>Middle Name<br>
+  <%= @child.middle_name %>
+</p>
+
+<p>Last Name<br>
+   <%= @child.last_name %>
+</p>
+
+<p>Gender<br>
+  <%= @child.gender %>
+</p>
+
+<p>Date of Birth<br>
+  <%= @child.date_of_birth %>
+</p>
+
+<p>SSN<br>
+  <%= @child.ssn %>
+</p>
+
+<p>Requires Special Care<br>
+  <%= @child.requires_special_care %>
+</p>
+
+<p>Foster Child?<br>
+  <%= @child.foster_child %>
+</p>
+
+<p>Immunized?<br>
+  <%= @child.immunized %>
+</p>
+
+<p>Enrollment Status<br>
+  <%= @child.enrollment_status %>
+</p>
+<% @child.family.guardians.each do |guardian| %>
+ <li><%= link_to guardian.full_name, family_url( @child.family) %></li>
+<% end %>
+
+<%= link_to 'Edit', edit_child_path(@child) %> |

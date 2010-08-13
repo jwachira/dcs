@@ -1,0 +1,38 @@
+<% title 'All  Providers', :body => true %>
+
+<%= link_to 'Add Provider', new_provider_url %>
+<table class="data" cellpadding="0">
+  <thead>
+    <th>Name</th>
+    <th>Street Address</th>
+    <th>City</th>
+    <th>Postal Code</th>
+    <th>Phone Number</th>
+    <th>Secondary Phone Number</th>
+    <th>Fax</th>
+    <th>License Number</th>
+    <th>License Effective Date</th>
+    <th>License Expiry Date</th>
+    <th>Actions</th>
+  </thead>
+  <tbody>
+    <% @providers.each do |provider| %>
+     <tr>
+       <td><%= link_to provider.name, provider_url(provider) %></td>
+       <td><%= provider.street_address %></td>
+       <td><%= provider.city         %></td>
+       <td><%= provider.postal_code %></td>
+       <td><%= provider.state        %></td>
+       <td><%= provider.phone_number %></td>
+       <td><%= provider.secondary_phone_number %></td>
+       <td><%= provider.fax %></td>
+       <td><%= provider.license_number %></td>
+       <td><%= provider.license_effective_date %></td>
+       <td><%= provider.license_expiry_date %></td>
+       <td><%= link_to 'Edit', edit_provider_url(provider) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @providers %>

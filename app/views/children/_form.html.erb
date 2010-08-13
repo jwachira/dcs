@@ -1,0 +1,13 @@
+<% f.inputs "Child Information" do %>
+  <%= f.input :first_name %>
+  <%= f.input :middle_name %>
+  <%= f.input :last_name %>
+  <%= f.input :gender, :collection => Child::GENDER, :as => :select %>
+  <%= f.input :date_of_birth %>
+  <%= f.input :ssn %>
+  <%= f.input :requires_special_care, :as => :boolean %>
+  <%= f.input :foster_child %>
+  <%= f.input :immunized %>
+  <%= f.input :enrollment_status %>
+  <%= f.input :active %>  
+<% end %>

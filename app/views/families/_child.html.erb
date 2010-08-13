@@ -1,0 +1,18 @@
+<% f.inputs "Child Information" do %>
+  <% f.semantic_fields_for :children do |child_f| %>
+    <%= child_f.input :first_name %>
+    <%= child_f.input :middle_name %>
+    <%= child_f.input :last_name %>
+    <%= child_f.input :gender, :collection => Child::GENDER, :as => :select %>
+    <%= child_f.input :date_of_birth %>
+    <%= child_f.input :ssn %>
+    <%= child_f.input :requires_special_care, :as => :boolean %>
+    <%= child_f.input :foster_child %>
+    <%= child_f.input :immunized %>
+    <%= child_f.input :enrollment_status %>
+    <%= child_f.input :active %>  
+  <% end %>
+<% end %>
+
+
+

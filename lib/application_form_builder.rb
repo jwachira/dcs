@@ -19,4 +19,9 @@ class ApplicationFormBuilder < Formtastic::SemanticFormBuilder
     options[:value] ||= @object.send(method).try(:to_s, :mdy)
     label(method, options.delete(:label), options.slice(:required)) + text_field(method, options.except(:required))
   end
+  
+  def state_input(method, options)
+    label(method, options.delete(:label), options.slice(:required)) + us_state_select(method, options)
+  end
+  
 end

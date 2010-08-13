@@ -1,8 +1,10 @@
-<% title 'New Emergency Contact', :body => true %>
+<% title "Editing Family Record", :body => true %>
 
-<% semantic_form_for(@family) do |f| %>
+<% semantic_form_for @family, :url => object_url do |f| %>
   <%= render 'form', :f => f %>
-  <% f.buttons do %>
-   <%= f.commit_button 'Submit' %>
-  <% end %>
+  <div class="button-col">
+    <% f.buttons do %>
+     <%= f.commit_button 'Submit' %>
+    <% end %>
+  </div>
 <% end %>
