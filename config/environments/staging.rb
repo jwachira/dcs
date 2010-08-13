@@ -23,9 +23,9 @@ ActionMailer::Base.raise_delivery_errors = true
 ActionMailer::Base.smtp_settings = {
   :address => "localhost",
   :port    => 25,
-  :domain  => tenantcamp.com
+  :domain  => 'siteforcare.com'
 }
 
 ActionMailer::Base.default_url_options = {
-  :host => tenantcamp.com
+  :host => 'dcs.siteforcare.com'
 }
