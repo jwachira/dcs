@@ -12,4 +12,13 @@ class Family < ActiveRecord::Base
   def full_name
     "#{first_name} #{last_name}"
   end
+  
+  def add_children_to_waiting_list
+    self.children.each do |child|
+      if child.enrollment_status.nil?
+        child.enrollment_status = "on_waiting_list"
+      end
+    end
+  end
+  
 end

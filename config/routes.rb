@@ -12,7 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.resources :immunizations
-   
+  map.resources :waiting_lists
   map.resources :children, :member => {:child_family => :get}
 
   map.resources :families do |family|

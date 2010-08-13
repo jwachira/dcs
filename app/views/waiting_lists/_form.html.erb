@@ -1,0 +1,8 @@
+<%= f.error_messages %>
+<div class="left-col">
+<%= render :partial => "families/child",   :locals => {:f => f}  %>
+</div>
+
+<div class="right-col">
+<%= render :partial => "families/guardian", :locals => {:f => f} %>
+</div>

@@ -12,4 +12,8 @@ class Child < ApplicationModel
   validates_presence_of :first_name, :last_name, :gender, :date_of_birth
   validates_presence_of :requires_special_care
 
+ def self.on_waiting_lists
+  scoped(:conditions => {:enrollment_status => "on_waiting_lists"})
+ end
+ 
 end

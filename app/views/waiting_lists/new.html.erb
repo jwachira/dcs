@@ -1,0 +1,10 @@
+<% title 'Adding Child to Waiting List', :body => true %>
+
+<% semantic_form_for @family, :url => collection_url, :html => {:multipart => true} do |f| %>
+  <%= render 'form', :f => f %>
+  <div class="button-col">
+    <% f.buttons do %>
+     <%= f.commit_button 'Submit' %>
+    <% end %>
+  </div>
+<% end %>
