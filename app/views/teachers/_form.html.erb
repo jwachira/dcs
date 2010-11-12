@@ -21,5 +21,6 @@
     <%= f.input :description %>
     <%= f.input :years, :as => :numeric %>
     <%= f.input :active, :wrapper_html => {:class => "agree_to_terms"} %>
+    <%= f.input :certification_ids, :collection => Certification.active, :as => :check_boxes, :label => "Certifications." %>
   <% end %>
 </div>

@@ -13,7 +13,7 @@ class TeachersController < ApplicationController
  end
  
  def update
-   @teacher = Teacher.find(params[:id])
+  @teacher = Teacher.find(params[:id])
   @teacher.attributes = params[:teacher]
   @teacher.provider   = current_user.provider
   if @teacher.save

@@ -1,4 +1,4 @@
-class Immunization < ActiveRecord::Base
+class Immunization < ApplicationModel
   has_many :child_immunizations
   has_many :children, :through => :child_immunizations
   

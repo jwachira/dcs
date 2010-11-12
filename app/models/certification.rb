@@ -1,4 +1,4 @@
-class Certification < ActiveRecord::Base
+class Certification < ApplicationModel
   has_many :teacher_certifications
   has_many :teacher, :through => :teacher_certifications
   

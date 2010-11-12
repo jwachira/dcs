@@ -25,6 +25,9 @@
 =end Schema Information
 
 class User < ApplicationModel
+  model_stamper
+  stampable
+  
   has_one :provider
   has_one :teacher
   has_one :family
@@ -35,10 +38,7 @@ class User < ApplicationModel
   acts_as_authentic do |c|
     c.validate_password_field = false
   end
-  
-  model_stamper
-  stampable
-  
+    
   attr_protected :password, :password_confirmation, :role
   
   validates_presence_of :first_name, :last_name, :email, :role
@@ -52,14 +52,8 @@ class User < ApplicationModel
   validates_format_of :password, :with => /[0-9]/, :allow_nil => true, :message => "must include a number"
 
   
-  # This method is necessary method for declarative_authorization to determine roles
-  # Roles returns e.g. [:admin]
   def role_symbols
     @role_symbols ||= (!role.nil?) ? [role.downcase.to_sym] : []
-  end
-    
-  def full_name
-    "#{first_name} #{last_name}"
   end
 
   def deliver_password_reset_instructions!

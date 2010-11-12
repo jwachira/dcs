@@ -11,9 +11,16 @@ ActionController::Routing::Routes.draw do |map|
     user.resource :password, :controller => "users/password"
   end
   
+  map.resources :certifications
   map.resources :immunizations
   map.resources :waiting_lists
-  map.resources :children, :member => {:child_family => :get}
+  map.resources :children, :member => {:child_family => :get} do |child|
+    child.resources :immunizations, :only => :index, :controller => "children/immunizations"
+    map.connect '/children/:child_id/immunizations',
+      :method => :put,
+      :controller => 'children/immunizations',
+      :action => 'update_all'
+  end
 
   map.resources :families do |family|
     family.resources :guardians

@@ -1,12 +1,9 @@
-<h1>Editing certification</h1>
+<% title "Editing #{@certification.name} Teacher Certification", :body => true %>
 
-<% form_for(@certification) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+<% semantic_form_for @certification, :url => certification_url(@certification) do |f| %>
+  <%= render 'form', :f => f %>
+  <% f.buttons do %>
+   <%= f.commit_button 'Submit' %>
+   <%= f.cancel_link %>
+  <% end %>
 <% end %>
-
-<%= link_to 'Show', @certification %> |
-<%= link_to 'Back', certifications_path %>

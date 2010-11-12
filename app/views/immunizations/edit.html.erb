@@ -1,12 +1,9 @@
-<h1>Editing immunization</h1>
+<% title "Editing #{@immunization.name}", :body => true %>
 
-<% form_for(@immunization) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+<% semantic_form_for @immunization, :url => object_url do |f| %>
+  <%= render 'form', :f => f %>
+  <% f.buttons do %>
+   <%= f.commit_button 'Update' %>
+   <%= f.cancel_link %>
+  <% end %>
 <% end %>
-
-<%= link_to 'Show', @immunization %> |
-<%= link_to 'Back', immunizations_path %>

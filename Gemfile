@@ -33,7 +33,7 @@ group :test do
 end
 
 group :metrics do
-  gem 'bundler',                         '0.9.26'
+  gem 'bundler',                         '1.0.7'
   gem 'relevance-rcov',   '0.9.0',    :require => 'rcov'
   gem 'metric_fu'
   gem 'churn'

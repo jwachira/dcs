@@ -1,0 +1,56 @@
+<% title "#{@child.full_name} Immunization History" %>
+<!--
+BRIEF REPORTING ON VACCINATIONS 
+-show a list completed vaccinations on the side
+-show upcoming vaccinations on the side
+-show exempted vaccinations
+
+ -->
+<% semantic_form_for :immunization, :url => child_immunizations_url(@child) do |f| %>
+  <table class="data">
+    <thead>
+      <th>Exempted</th>
+      <th>Administered</th>
+      <th>Vaccine</th>
+      <th>Last Vaccination Date</th>
+      <th>Next Vaccination Date</th>
+    </thead>
+    <tbody>
+      <% @child.child_immunizations.not_exempted.each do |immunization| %>
+        <tr>
+          <td><%= check_box  "immunization[#{immunization.id}]",   :exempted,      :checked => (immunization.exempted) %></td>
+          <td><%= check_box "immunization[#{immunization.id}]",    :administered,  :checked => (immunization.administered) %></td>
+          <td><%= immunization.immunization.name %></td>
+          <td><%= text_field "immunization[#{immunization.id}]", :last_dose_date, :value => (immunization.last_dose_date if immunization.last_dose_date)  %></td>
+          <td><%= text_field "immunization[#{immunization.id}]", :next_dose_date, :value => (immunization.next_dose_date if immunization.next_dose_date)  %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= f.submit 'Update Immunization History' %>
+<% end %>
+
+<div>
+  <h3>Due Immunizations</h3>
+  <ul>
+    <% @child.child_immunizations.upcoming.each do |immunization| %>
+      <li><%= immunization.immunization.name %>:<%= "Due Date - #{immunization.next_dose_date}" %> <%= "(in #{(immunization.next_dose_date - Date.today)} days)" %></li>
+    <% end %>
+  </ul>
+  
+  <h3>Pending Immunizations</h3>
+  <ul>
+    <% @child.child_immunizations.not_exempted.not_administered.active.each do |immunization| %>
+      <li><%= immunization.immunization.name %></li>
+    <% end %>
+  </ul>
+    
+  <h3>Exempted Vaccinations</h3>
+  <ul>
+    <% @child.child_immunizations.exempted.each do |immunization| %>
+      <li><%= immunization.immunization.name %></li>
+    <% end %>
+  </ul>
+  
+
+</div>

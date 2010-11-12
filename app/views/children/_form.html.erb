@@ -4,11 +4,12 @@
   <%= f.input :last_name %>
   <%= f.input :gender, :collection => Child::GENDER, :as => :select %>
   <%= f.input :date_of_birth %>
-  <%= f.input :ssn %>
   <%= f.input :requires_special_care, :as => :boolean %>
   <%= f.input :foster_child %>
   <%= f.input :immunized %>
   <%= f.input :enrollment_status %>
   <%= f.input :photo %>
   <%= f.input :active %>  
+  <!-- Add expiry date or due date for the immunization -->
+  <%= f.input :immunization_ids, :collection => Immunization.active, :as => :check_boxes %>
 <% end %>

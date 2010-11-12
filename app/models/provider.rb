@@ -1,4 +1,4 @@
-class Provider < ActiveRecord::Base
+class Provider < ApplicationModel
   belongs_to :user
   has_many :children
   has_many :teachers

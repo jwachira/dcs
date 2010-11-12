@@ -1,62 +1,16 @@
-= Weibaseapp
+-child immunizations -> belongs_to -> ()
+-child medical conditions (add physical conditions)
+-Alergies
+-Medical Release forms
+-
+Parent & Guardian
+=======================
 
-This is the WEI base code for starting projects. Follow the getting started instructions below to create a new Rails project. Only commit changes back into this app when updating the base app, not when saving your project. 
-
-== Getting Started
-
-1. Clone the git WEI base app repository using
-
-   `git clone git@github.com:wested/weibaseapp.git`  
-    
-
-2. You will want keep a link to this project as part of the git repository so you can easily fetch and merge enhancements and bug fixes of the base app into your project.
-
-    `git remote add base git@github.com:wested/weibaseapp.git`
-    
-    In the future you can run the following command to receive updates:
-        `git pull base`
-
-
-3. Initialize the submodules and pull them into the project
-
-    `git submodule init
-   git submodule update`
-
-
-4. Run all the normal commands when updating a project, such as:
-
-    `rake gems:install, 
-   rake db:migrate, 
-   rake data:load:default:development`
-
-5. Now you want to change where your origin points to; from the weibaseapp to your new_project.
-
-    `vim .git/config`
-
-    find the entry that looks like
-
-    `[remote "origin"]  
-  url = git@github.com:wested/weibaseapp.git
-  fetch = +refs/heads/*:refs/remotes/origin/*`
-
-   and change it to
-
-
-    `[remote "origin"]  
-  url = git@github.com:wested/new_project.git
-  fetch = +refs/heads/*:refs/remotes/origin/*`  
-
-    (be sure to replace new_project above with the name of your new project)
-
-6. Finally after you have created the new project on github run
-
-    `git push origin master`
-
-7. Be sure to now follow the steps in the Workflow page (https://wiki.interactive.wested.org/mediawiki/index.php/Git_Workflow) to replace the master branch with an iteration branch.
-
-
-== Configuring Hoptoad
-
-After creating the project and configuring the repository, enable the Hoptoad gem in the environment.rb and run the following snippet to generate the Hoptoad initializer and modify the deploy script. Double check the hoptoad_notifier page for current instructions (http://github.com/thoughtbot/hoptoad_notifier).
-  ./script/generate hoptoad --api-key your_key_here
+Client Information ( family + child)
+Child Medical Information
+Medical Emergency Release Information
+Fees & Charges Form
+Child Transportation
+Child Immunization History
+Child Allergy Information (medical details)
 
